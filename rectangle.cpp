@@ -7,7 +7,7 @@
 using std::string;
 using std::stringstream;
 
-Rectangle::Rectangle(size_t width, size_t height) : _width(width), _height(height){
+Rectangle::Rectangle(double width, double height) : _width(width), _height(height){
 }
 double Rectangle::Area()const{
 	return _width * _height;
@@ -17,7 +17,7 @@ double Rectangle::Perimeter()const{
 }
 string Rectangle::ToString()const{
 	stringstream retVal;
-	retVal << Shape::ToString() << "{Rectangle: {width: " << _width << ", height: " << _height <<  "}}";
+	retVal << Shape::ToString() << ": Rectangle: {width: " << _width << ", height: " << _height <<  "}";
 	return retVal.str();
 }
 double Rectangle::Diagonal()const{
