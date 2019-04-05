@@ -8,8 +8,8 @@ class Shape{
 
 public:
 	Shape();
-	virtual double Area()const;
-	virtual double Perimeter()const;
+	virtual double Area()const = 0; // Setting these methods to be abstract methods
+	virtual double Perimeter()const = 0;
 	virtual string ToString()const;
 };
 
