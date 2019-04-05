@@ -10,7 +10,7 @@ public:
 	Shape();
 	double Area()const;
 	double Perimeter()const;
-	string ToString()const;
+	virtual string ToString()const;
 };
 
 
