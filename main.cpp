@@ -8,10 +8,14 @@ using std::cout;
 using std::endl;
 using std::vector;
 
+void ToString(const Shape s){
+	cout << s.ToString() << endl;
+}
+
 int main(){
 	vector<Shape*> shapes;
 
-	shapes.push_back(new Shape());
+	shapes.push_back(new Rectangle(5, 2));
 	shapes.push_back(new Square(5));
 	shapes.push_back(new Rectangle(1, 3));
 	// shapes.push_back(string("Hello")); will not compile because string "is not a" Shape
