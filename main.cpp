@@ -3,28 +3,22 @@
 #include "square.h"
 
 #include <iostream>
+#include <vector>
 using std::cout;
 using std::endl;
+using std::vector;
 
 int main(){
-	Shape s;
-	Rectangle r(2.5, 3.5);
-	Square q(1.1);
+	vector<Shape> shapes;
 
-	cout << s.ToString() << endl;
-	cout << s.Area() << endl;
-	cout << s.Perimeter() << endl;
+	shapes.push_back(Shape());
+	shapes.push_back(Square(5));
+	shapes.push_back(Rectangle(1, 3));
+	// shapes.push_back(string("Hello")); will not compile because string "is not a" Shape
 
-	cout << r.ToString() << endl;
-	cout << r.Area() << endl;
-	cout << r.Perimeter() << endl;
-	cout << r.Diagonal() << endl;
-
-	cout << q.ToString() << endl;
-	cout << q.Area() << endl;
-	cout << q.Perimeter() << endl;
-	cout << q.Diagonal() << endl;
-
+	for (size_t i = 0; i < shapes.size(); i++) {
+		cout << shapes[i].ToString() << endl;
+	}
 
 	return 0;
 }
