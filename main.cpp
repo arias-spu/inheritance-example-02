@@ -8,7 +8,7 @@ using std::cout;
 using std::endl;
 using std::vector;
 
-void ToString(const Shape s){
+void ToString(const Shape& s){
 	cout << s.ToString() << endl;
 }
 
@@ -36,6 +36,9 @@ int main(){
 	for (size_t i = 0; i < shapes.size(); i++) {
 		delete shapes.at(i);
 	}
+	cout << "--------------------------------" << endl << endl;
+	ToString(Rectangle(3, 4));
+	ToString(Square(8));
 
 	return 0;
 }
