@@ -9,7 +9,7 @@ class Square : public Rectangle{
 
 public:
 	Square(double);
-	string ToString()const;
+	virtual string ToString()const;
 };
 
 

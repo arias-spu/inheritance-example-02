@@ -10,9 +10,9 @@ class Rectangle: public Shape{
 	double _width, _height;
 public:
 	Rectangle(double width, double height);
-	double Area()const;
-	double Perimeter()const;
-	string ToString()const;
+	virtual double Area()const;
+	virtual double Perimeter()const;
+	virtual string ToString()const;
 	double Diagonal()const;
 
 };

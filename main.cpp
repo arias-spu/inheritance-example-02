@@ -16,8 +16,17 @@ int main(){
 	shapes.push_back(new Rectangle(1, 3));
 	// shapes.push_back(string("Hello")); will not compile because string "is not a" Shape
 
+	Rectangle* r;
+
 	for (size_t i = 0; i < shapes.size(); i++) {
 		cout << shapes[i]->ToString() << endl;
+		cout << shapes[i]->Area() << endl;
+		cout << shapes[i]->Perimeter() << endl;
+		r = dynamic_cast<Rectangle*>(shapes[i]);
+		if (r != nullptr){
+			cout << r->Diagonal() << endl;
+		}
+		//cout << shapes[i]->Diagonal() << endl;
 	}
 
 	for (size_t i = 0; i < shapes.size(); i++) {

@@ -8,8 +8,8 @@ class Shape{
 
 public:
 	Shape();
-	double Area()const;
-	double Perimeter()const;
+	virtual double Area()const;
+	virtual double Perimeter()const;
 	virtual string ToString()const;
 };
 
